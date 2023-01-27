@@ -1,6 +1,6 @@
 {
   "name": "react-cork",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "description": "A React Library for Hooks and Utilities.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

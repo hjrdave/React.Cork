@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-          package: client/lib/
+          package: client/lib
       - run: npm ci
       - run: npm publish
         env:

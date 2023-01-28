@@ -1,5 +1,4 @@
-![example workflow](https://github.com/hjrdave/React.Cork/actions/workflows/npm-publish.yml/badge.svg)  
-![example event parameter](https://github.com/hjrdave/React.Cork/actions/workflows/npm-publish.yml/badge.svg?event=push)
+![example workflow](https://github.com/hjrdave/React.Cork/actions/workflows/npm-publish.yml/badge.svg) 
 
 # React.Cork
 

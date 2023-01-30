@@ -39,6 +39,6 @@ jobs:
       # - name: Updating Version
       #   run: npm version ${{ env.VERSION }} --no-git-tag-version
       - name: Publishing to NPM
-        run: cd .build && npm version ${{ env.VERSION }} --no-git-tag-version && npm publish
+        run: cd ./build && npm version ${{ env.VERSION }} --no-git-tag-version && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

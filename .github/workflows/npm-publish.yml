@@ -34,9 +34,11 @@ jobs:
         run: npm ci
       - name: Building Package
         run: npm run build
+      - name: Targeting Build
+        run: cd ./build
       - name: Updating Version
         run: npm version ${{ env.VERSION }} --no-git-tag-version
       - name: Publishing to NPM
-        run: cd ./build && npm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

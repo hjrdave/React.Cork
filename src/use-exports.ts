@@ -1,5 +1,5 @@
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+//import 'jspdf-autotable';
 import { utils, write } from "xlsx";
 import { saveAs } from "file-saver";
 

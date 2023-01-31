@@ -2,8 +2,8 @@
   "name": "react-cork",
   "version": "1.0.0",
   "description": "A React Library for Hooks and Utilities.",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "start": "babel --watch src --out-dir build --extensions .ts,.tsx",
     "build": "npm run prebuild && babel src --out-dir build --extensions .ts,.tsx && tsc --emitDeclarationOnly",

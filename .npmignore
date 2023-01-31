@@ -18,6 +18,8 @@ yarn.lock
 # project files
 src
 
+build
+
 # environment configurations
 .babelrc
 .editorconfig

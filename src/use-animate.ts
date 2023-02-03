@@ -4,7 +4,7 @@ import React, { useState, useEffect, CSSProperties } from "react";
 
 type AnimationType = "fadeIn" | "translate" | "scale";
 
-interface Options {
+export interface Options {
     type: AnimationType;
     delay?: number;
     duration?: number;

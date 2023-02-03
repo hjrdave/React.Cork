@@ -15,6 +15,7 @@ import useObject from "./use-object";
 import useQuerySelector from "./use-query-selector";
 import useRegex from "./use-regex";
 import useString from "./use-string";
+import useAnimate from "./use-animate";
 
 const Cork = {
     useFetch,
@@ -33,7 +34,8 @@ const Cork = {
     useObject,
     useQuerySelector,
     useRegex,
-    useString
+    useString,
+    useAnimate
 }
 
 export {
@@ -53,7 +55,8 @@ export {
     useObject,
     useQuerySelector,
     useRegex,
-    useString
+    useString,
+    useAnimate
 };
 
 export default Cork;

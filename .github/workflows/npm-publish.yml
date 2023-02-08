@@ -33,11 +33,7 @@ jobs:
       - name: Installing Packages
         run: npm ci
       - name: Building Package
-        run: npm run build
-      # - name: Targeting Build
-      #   run: cd ./build
-      # - name: Updating Version
-      #   run: npm version ${{ env.VERSION }} --no-git-tag-version
+        run: npm run prod:build
       - name: Publishing to NPM
         run: cd ./build && npm version ${{ env.VERSION }} --no-git-tag-version && npm publish
         env:

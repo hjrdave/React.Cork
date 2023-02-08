@@ -6,9 +6,9 @@
   "types": "index.d.ts",
   "scripts": {
     "start": "babel --watch src --out-dir build --extensions .ts,.tsx",
-    "build": "npm run prebuild && babel src --out-dir build --extensions .ts,.tsx && tsc --emitDeclarationOnly",
-    "prebuild": "copyfiles package.json LICENSE CONTRIBUTING.md build",
-    "tsc:watch": "tsc --watch --emitDeclarationOnly"
+    "tsc:watch": "tsc --watch --emitDeclarationOnly",
+    "build": "babel src --out-dir build --extensions .ts,.tsx && tsc --emitDeclarationOnly",
+    "prod:build": "copyfiles package.json LICENSE CONTRIBUTING.md build && npm run build"
   },
   "repository": {
     "type": "git",

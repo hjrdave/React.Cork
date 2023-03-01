@@ -3,8 +3,8 @@
  * @param   {<string>} removeLeadingZero Method removes leading zeros from a string.
  * @return  {object} Methods for string manipulating.
  */
-import useRegex from './use-regex';
-import useObject from './use-object';
+import useRegex from './useRegex';
+import useObject from './useObject';
 const useString = () => {
 
     const { isFile } = useObject();

@@ -3,7 +3,7 @@
     useFetch hook that fetches data from api and has global state integration
 */
 import React from "react";
-import useNonInitialEffect from "../use-non-initial-effect";
+import useNonInitialEffect from "../useNonInitialEffect";
 import { UseFetch } from "./interfaces";
 
 

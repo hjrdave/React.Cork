@@ -1,5 +1,5 @@
 import React from 'react';
-import useQuerySelector from './use-query-selector';
+import useQuerySelector from './useQuerySelector';
 
 const useDataAttributes = (dataAttribute: string) => {
 

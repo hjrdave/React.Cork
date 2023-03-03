@@ -1,8 +1,8 @@
-const useLocalStorage = () => {
+const useSessionStorage = () => {
 
-    const set = (key: string, value: any) => localStorage.setItem(key, JSON.stringify(value));
+    const set = (key: string, value: any) => sessionStorage.setItem(key, JSON.stringify(value));
     const get = (key: string) => {
-        const cachedValue = localStorage.getItem(key);
+        const cachedValue = sessionStorage.getItem(key);
         if (cachedValue !== null) {
             const parsedCachedValue = JSON.parse(cachedValue);
             return parsedCachedValue;
@@ -10,11 +10,11 @@ const useLocalStorage = () => {
         return cachedValue;
     };
     const remove = (key: string) => {
-        localStorage.removeItem(key);
+        sessionStorage.removeItem(key);
     }
-    const clear = () => localStorage.clear();
+    const clear = () => sessionStorage.clear();
 
     return { set, get, remove, clear }
 }
 
-export default useLocalStorage;
+export default useSessionStorage;

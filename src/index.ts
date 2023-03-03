@@ -16,6 +16,8 @@ import useQuerySelector from "./useQuerySelector";
 import useRegex from "./useRegex";
 import useString from "./useString";
 import useAnimate from "./useAnimate";
+import useLocalStorage from "./useSessionStorage";
+import useSessionStorage from "./useSessionStorage";
 
 const Cork = {
     useFetch,
@@ -35,7 +37,9 @@ const Cork = {
     useQuerySelector,
     useRegex,
     useString,
-    useAnimate
+    useAnimate,
+    useLocalStorage,
+    useSessionStorage
 }
 
 export {
@@ -56,7 +60,9 @@ export {
     useQuerySelector,
     useRegex,
     useString,
-    useAnimate
+    useAnimate,
+    useLocalStorage,
+    useSessionStorage
 };
 
 export default Cork;

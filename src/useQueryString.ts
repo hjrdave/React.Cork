@@ -14,15 +14,3 @@ const useQueryString = (key: string) => {
     return value;
 };
 export default useQueryString;
-
-// The useQueryString hook reads the value of a specific query string parameter from the URL and returns it.
-
-// It takes a single argument: key, which is the name of the query string parameter you want to retrieve the value of.
-
-// const name = useQueryString('name');
-
-// return (
-//     <div>
-//     Query string: name = { name }
-//         < /div>
-// );

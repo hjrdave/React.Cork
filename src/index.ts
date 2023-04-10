@@ -9,6 +9,7 @@ import useQuerySelector from "./useQuerySelector";
 import useAnimate from "./useAnimate";
 import useLocalStorage from "./useSessionStorage";
 import useSessionStorage from "./useSessionStorage";
+import useCookie from "./useCookie";
 
 const Cork = {
     useCleanupEffect,
@@ -21,7 +22,8 @@ const Cork = {
     useQuerySelector,
     useAnimate,
     useLocalStorage,
-    useSessionStorage
+    useSessionStorage,
+    useCookie
 }
 
 export {
@@ -35,7 +37,8 @@ export {
     useQuerySelector,
     useAnimate,
     useLocalStorage,
-    useSessionStorage
+    useSessionStorage,
+    useCookie
 };
 
 export default Cork;

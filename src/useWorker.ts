@@ -3,29 +3,19 @@
  * */
 
 import { useState, useEffect, useRef } from 'react';
+import useNonInitialEffect from './useNonInitialEffect';
 
-interface WorkerData {
-    data: any;
-}
-
-interface WorkerFunction {
-    (): void;
-}
-
-const useWorker = (workerFn: WorkerFunction): [WorkerData | null, (data: any) => void] => {
+const useWorker = <TData=any>(workerFn: () => TData) => {
+    const [trigger, setTrigger] = useState([]);
     const workerRef = useRef<Worker | null>(null);
-    const [workerData, setWorkerData] = useState<WorkerData | null>(null);
+    const [data, setData] = useState<TData | null>(null);
 
-    useEffect(() => {
-        if (!workerFn) {
-            return;
-        }
-
+    useNonInitialEffect(() => {
         const worker = new Worker(URL.createObjectURL(new Blob([`(${workerFn})()`])));
         workerRef.current = worker;
 
         worker.onmessage = event => {
-            setWorkerData(event.data);
+            setData(event.data);
         };
 
         return () => {
@@ -33,13 +23,15 @@ const useWorker = (workerFn: WorkerFunction): [WorkerData | null, (data: any) =>
                 workerRef.current.terminate();
             }
         };
-    }, [workerFn]);
+    }, [trigger]);
 
-    const postMessageToWorker = useRef((data: any) => {
+    const run = () => (setTrigger([]));
+
+    const postMessage = useRef((data: any) => {
         workerRef.current!.postMessage(data);
     }).current;
 
-    return [workerData, postMessageToWorker];
+    return {data, postMessage, run};
 };
 
 export default useWorker;

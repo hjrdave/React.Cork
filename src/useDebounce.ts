@@ -15,7 +15,7 @@ const useDebounce = (fn: any, delay: number) => {
             }, delay);
         };
     };
-    return React.useCallback(debouncedFn((...args: any) => fn(...args), delay), [delay]);
+    return React.useCallback(debouncedFn((...args: any) => fn(...args), delay), [fn, delay]);
 
 }
 
